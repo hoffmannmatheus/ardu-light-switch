@@ -1,0 +1,40 @@
+# This file defines daily schedules that are ran by the arduino devices.
+# Each line specifies a servo command to be ran at a specific time (accuracy to the second),
+# and will run once a day.
+#
+# Format:
+#   hour:minute:second;device id;servo command
+# Where servo command specifies the new servo angle, in degrees, to be set.
+#
+# For example, if we know that the "on" and "center" positions of a light swicth servo,
+# we can turn the light on at 8:30pm like so:
+#  20:30:00;1;70  # on position
+#  20:30:01;1;90  # return to center
+#
+# Daily commands for device 1:
+19:15:00;1;70
+19:15:01;1;90
+20:05:00;1;110
+20:05:01;1;90
+22:10:00;1;70
+22:10:01;1;90
+23:15:00;1;110
+23:15:01;1;90
+# Daily commands for device 2:
+18:15:00;2;111
+18:15:01;2;96
+19:03:00;2;81
+19:03:01;2;96
+19:50:00;2;111
+19:50:01;2;96
+20:55:00;2;81
+20:55:01;2;96
+22:13:00;2;111
+22:13:01;2;96
+22:19;00;2;81
+22:19;01;2;96
+23:14:00;2;111
+23:14:01;2;96
+23:17:00;2;81
+23:17:01;2;96
+

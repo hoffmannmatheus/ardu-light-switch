@@ -5,7 +5,7 @@
 
 // This device configuration
 #define DEVICE_ID     "1"
-#define DEVICE_CENTER  90 // TODO Move servo settings to the JSON config
+#define DEVICE_CENTER  90 // TODO Move servo settings to Firebase DB
 #define DEVICE_ON      70
 #define DEVICE_OFF    110
 #define SERVO_PIN       2

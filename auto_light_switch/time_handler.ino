@@ -34,3 +34,12 @@ void getCurrentTime(char* currentTime, int size) {
   }
   strftime(currentTime, size, "%H:%M:%S", &timeinfo);
 }
+
+void getCurrentIsoTime(char* currentTime, int size) {
+  struct tm timeinfo;
+  if(!getLocalTime(&timeinfo)){
+    Serial.println("No time available (yet)");
+    return;
+  }
+  strftime(currentTime, size, "%Y-%m-%dT%H:%M:%S", &timeinfo);
+}

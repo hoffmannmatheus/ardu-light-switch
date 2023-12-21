@@ -2,9 +2,9 @@
 #include <HTTPClient.h>
 #include <ArduinoJson.h>
 
-#define CONFIG_POLL_INTERVAL      600000 // 10 minutes
-#define SERVO_UPDATE_INTERVAL        500
-#define SERVO_MAX_ACTIVATION_TIME   3000
+#define CONFIG_POLL_INTERVAL      600000 //  10 minutes
+#define SERVO_UPDATE_INTERVAL        500 // 0.5 seconds
+#define SERVO_MAX_ACTIVATION_TIME   1100 // 1.1 seconds
 #define MAX_TIMES                     32
 
 #define CONFIG_URL "https://raw.githubusercontent.com/hoffmannmatheus/ardu-light-switch/main/schedules/daily"
@@ -112,7 +112,9 @@ void setupTimeSchedules(String payload) {
     }
   }
   
+  // At this point, we can consider this a successful boot
   setColor(COLOR_GREEN);
+  sendReadySignal();
 
   // priont to make sure
   for(int i = 0; i < onSchedule.size; i++) {

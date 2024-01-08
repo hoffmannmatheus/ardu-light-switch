@@ -9,7 +9,7 @@ The main loop will try matching the current time against the schedule, accurate 
 There's many improvevements that could be made, but this worked perfecly for a few weeks out of the house.
 
 ## Build
-The build is very simple, using an Arduino ESP32 and 9g servo hot-glued to a little wooden base. I fed the servo through the VOUT pin from the Arduino. Here's what it looks like:
+The build is very simple, using an Arduino ESP32 and 9g servo hot-glued to a little wooden base. I fed the servo through the [VBUS pin from the Arduino](https://support.arduino.cc/hc/en-us/articles/360014779679-Enable-5-V-power-on-the-VUSB-or-VBUS-pin-on-Nano-boards). Here's what it looks like:
 
 ![PXL_20231210_211808794](https://github.com/hoffmannmatheus/ardu-light-switch/assets/889815/5d71c075-0074-457d-bf74-8e47ec0ff5c4)
 
